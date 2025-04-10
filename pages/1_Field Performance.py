@@ -130,7 +130,7 @@ df_data_filtered=data_frame_for_plot(data_frame_list2)
 st.dataframe(df_filtered)
 fig2=field_perf_plot(df_data_filtered)
 st.text('Field Performannce on Selected year by User')
-st.pyplot(fig2,width=25)
+st.pyplot(fig2,)
 
 # create two columns for charts
 fig_col1, fig_col2 = st.columns(2)
