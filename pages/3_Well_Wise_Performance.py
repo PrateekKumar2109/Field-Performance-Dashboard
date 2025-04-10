@@ -48,7 +48,7 @@ def field_perf_plot(field_data_plot,well_n):
    fig=plt.figure(figsize=(20,14),dpi=90)
    ax = fig.add_subplot(211)
 
-   ax.set_title(well_n+'  Ratna & R-Series Field Performance plot ',fontsize=32)
+   ax.set_title(well_n+'  Performance plot ',fontsize=32)
    ax.plot(field_data_plot['Date'],field_data_plot['Ql, blpd'],color='brown',lw=3.5,label='Liquid Rate')
    ax.plot(field_data_plot['Date'],field_data_plot['Qo, bopd'],color='green',marker='o',lw=3.5,label='Oil Rate')
    ax.legend(loc=1,fontsize='x-large')
