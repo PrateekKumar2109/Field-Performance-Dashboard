@@ -22,7 +22,7 @@ if data_uploader is not None:
           data_df=data_df[['Platform','Well No','Date','Days','YEAR','Ql, blpd', 'Qo, bopd', 'Qw, bopd','RecOil, bbls   ',
                   'Qg (Assoc. Gas), m3/d','Moil, MMt', 'RecGas, m3']]  
     except:      
-          data_df=pd.read_excel(data_uploader,sheet_name=10)
+          data_df=pd.read_excel(data_uploader)
 
           data_df=data_df[['Platform','Well No','Date','Days','YEAR','Ql, blpd', 'Qo, bopd', 'Qw, bopd','RecOil, bbls   ',
                   'Qg (Assoc. Gas), m3/d','Moil, MMt', 'RecGas, m3']]
@@ -141,7 +141,7 @@ st.dataframe(df_filtered)
 plat_list=_sum(platforms)
 fig2=field_perf_plot(df_data_filtered,plat_list)
 st.text('Field Performannce on Selected year by User')
-st.pyplot(fig2,width=25)
+st.pyplot(fig2)
 # create two columns for charts
 
 fig_col1, fig_col2 = st.columns(2)
