@@ -16,7 +16,7 @@ if data_uploader is not None:
           data_df=data_df[['Platform','Well No','Date','Days','YEAR','Ql, blpd', 'Qo, bopd', 'Qw, bopd','RecOil, bbls   ',
                   'Qg (Assoc. Gas), m3/d','Moil, MMt', 'RecGas, m3']]  
     except:      
-          data_df=pd.read_excel(data_uploader,sheet_name=10)
+          data_df=pd.read_excel(data_uploader)
 
           data_df=data_df[['Platform','Well No','Date','Days','YEAR','Ql, blpd', 'Qo, bopd', 'Qw, bopd','RecOil, bbls   ',
                   'Qg (Assoc. Gas), m3/d','Moil, MMt', 'RecGas, m3']]
