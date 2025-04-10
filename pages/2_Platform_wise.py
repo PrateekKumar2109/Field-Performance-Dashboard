@@ -131,7 +131,7 @@ df_field_dta_plot=data_frame_for_plot(data_frame_list1)
 st.dataframe(df_field_dta_plot)
 fig1=field_perf_plot(df_field_dta_plot,platform[0])
 st.text('Platform Production  Performance ')
-st.pyplot(fig1,width=25)
+st.pyplot(fig1)
 
 df_filter=df[df['Platform'].isin(platforms)]
 
