@@ -15,7 +15,7 @@ if data_uploader is not None:
           data_df=data_df[['Platform','Well No','Date','Days','YEAR','Ql, blpd', 'Qo, bopd', 'Qw, bopd','RecOil, bbls   ',
                   'Qg (Assoc. Gas), m3/d','Moil, MMt', 'RecGas, m3']]  
     except:      
-          data_df=pd.read_excel(data_uploader,sheet_name=10,engine='pyxlsb' )
+          data_df=pd.read_excel(data_uploader,engine='pyxlsb' )
 
           data_df=data_df[['Platform','Well No','Date','Days','YEAR','Ql, blpd', 'Qo, bopd', 'Qw, bopd','RecOil, bbls   ',
                   'Qg (Assoc. Gas), m3/d','Moil, MMt', 'RecGas, m3']]
@@ -103,10 +103,10 @@ df_plat_dta_plot=data_frame_for_plot(df)
 st.dataframe(df_plat_dta_plot)
 fig1=field_perf_plot(df_plat_dta_plot,platfor)
 st.text('Platform Production  Performance ')
-st.pyplot(fig1,width=25)
+st.pyplot(fig1)
 
 df_well_dta_plot=data_frame_for_plot(df_well_data)
 st.dataframe(df_well_dta_plot)
 fig2=field_perf_plot(df_well_dta_plot,well_name)
 st.text('Well  Production  Performance ')
-st.pyplot(fig2,width=25)
+st.pyplot(fig2)
