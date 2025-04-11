@@ -93,8 +93,8 @@ def field_perf_plot(field_data_plot,platfor):
    ax2.tick_params( axis='y',labelsize=16,direction='out', length=6, width=2, colors='black',
                grid_color='r', grid_alpha=0.5)
    ax2.set_ylabel("Water Cut ",color="blue",fontsize=26)
-   ax.xaxis.grid(color='black', linestyle='--', linewidth=1.5)
-   ax.yaxis.grid(color='black', linestyle='--', linewidth=1.5)
+   #ax.xaxis.grid(color='black', linestyle='--', linewidth=1.5)
+   #ax.yaxis.grid(color='black', linestyle='--', linewidth=1.5)
 
    ax3 = fig.add_subplot(212)
    #ax.set_title(platform[k]+'  Performance plot Allocation',fontsize=20)
@@ -115,8 +115,8 @@ def field_perf_plot(field_data_plot,platfor):
    ax4.tick_params( axis='y',labelsize=16,direction='out', length=6, width=2, colors='black',
                grid_color='r', grid_alpha=0.5)
    ax4.set_ylabel("GOR (v/v)",color="orange",fontsize=22)
-   ax3.xaxis.grid(color='black', linestyle='--', linewidth=1.5)
-   ax3.yaxis.grid(color='black', linestyle='--', linewidth=1.5)
+   #ax3.xaxis.grid(color='black', linestyle='--', linewidth=1.5)
+   #ax3.yaxis.grid(color='black', linestyle='--', linewidth=1.5)
    #plt.show()
    #plt.savefig("Performance plot Allocation. pdf", format="pdf", bbox_inches="tight")
    plt.setp(ax.get_xticklabels(), visible=False)
@@ -128,7 +128,7 @@ df_filtered=df[df['Platform'].isin(platform)]
 data_frame_list1=dataframe_list_conv(df_filtered,platform)
 
 df_field_dta_plot=data_frame_for_plot(data_frame_list1)
-st.dataframe(df_field_dta_plot)
+#st.dataframe(df_field_dta_plot)
 fig1=field_perf_plot(df_field_dta_plot,platform[0])
 st.text('Platform Production  Performance ')
 st.pyplot(fig1)
@@ -137,7 +137,7 @@ df_filter=df[df['Platform'].isin(platforms)]
 
 data_frame_list2=dataframe_list_conv(df_filter,platforms)
 df_data_filtered=data_frame_for_plot(data_frame_list2)
-st.dataframe(df_filtered)
+#st.dataframe(df_filtered)
 plat_list=_sum(platforms)
 fig2=field_perf_plot(df_data_filtered,plat_list)
 st.text('Field Performannce on Selected year by User')
