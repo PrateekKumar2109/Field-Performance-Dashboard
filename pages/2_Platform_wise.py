@@ -80,7 +80,7 @@ def field_perf_plot(field_data_plot, platfor):
     field_data_plot = field_data_plot.sort_values(by='Date')
     
     # Set x-tick interval
-    tick_interval = 3
+    tick_interval = 6
     xticks = field_data_plot['Date'][::tick_interval]
     xtick_labels = [d.strftime("%b-%y") for d in xticks]
     
